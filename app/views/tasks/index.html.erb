@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="mb-3">My tasks</h1>
+  <ul class="list-group mb-3">
+    <% @tasks.each do |task| %>
+      <li class="list-group-item pl-5">
+        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+        <%= link_to "#{task.title}", task_path(task) %>
+      </li>
+    <% end %>
+  </ul>
+    <i class="fas fa-plus-circle mr-1"></i> <%=link_to "Add a new task", tasks_new_path %>
+</div>

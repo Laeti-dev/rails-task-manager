@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row justify-content-between">
+    <div class="col-4 justify-content-end">
+      <h1 class="ml-3"><%= @task.title %></h1>
+    </div>
+    <div class="col-4 justify-item-end">
+        <%= link_to "Edit this task", task_edit_path, class: "btn btn-outline-primary mt-2"  %>
+    </div>
+        <div class="col-4 justify-item-end">
+        <%= link_to "Delete this task", task_edit_path, class: "btn btn-outline-primary mt-2"  %>
+    </div>
+
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <%= @task.details %>
+    </div>
+    <div class="card-body">
+      <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+    </div>
+  </div>
+
+  <div class="m-3">
+    <i class="fas fa-arrow-circle-left ml-3 mr-1"></i><%= link_to "Back to list", tasks_path  %>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Edit your task</h1>
+
+  <%= simple_form_for @task do |f| %>
+    <div class="form-inputs m-3">
+      <%= f.input :title %>
+      <%= f.input :details %>
+      <%= f.input :completed %>
+      <%= f.submit 'Update task', class:"btn btn-outline-dark" %>
+    </div>
+
+    <i class="fas fa-arrow-circle-left ml-3 mr-1"></i><%= link_to "Back to list", tasks_path %>
+  <% end %>
+</div>
