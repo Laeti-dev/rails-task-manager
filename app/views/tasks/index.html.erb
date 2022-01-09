@@ -4,7 +4,8 @@
     <% @tasks.each do |task| %>
       <li class="list-group-item pl-5">
         <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-        <%= link_to "#{task.title}", task_path(task) %>
+        <%= link_to "#{task.title} ・", task_path(task) %>
+        <%= link_to "", task_path(task), class: "fas fa-trash-alt primary", method: :delete, data: { confirm: "Are you sure?" } %>
       </li>
     <% end %>
   </ul>
