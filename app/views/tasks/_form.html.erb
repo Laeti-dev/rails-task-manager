@@ -1,0 +1,8 @@
+  <%= simple_form_for @task do |f| %>
+    <div class="form-inputs m-3">
+      <%= f.input :title %>
+      <%= f.input :details %>
+      <%= f.input :completed %>
+      <%= f.submit class:"btn btn-outline-dark" %>
+    </div>
+  <% end %>
